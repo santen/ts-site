@@ -1,0 +1,83 @@
+.main-wrap{
+	width: 1400px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	position: absolute;
+	background: #FFF;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+}
+
+.logo-wrap{
+	height: 50px;
+}
+
+.actions{
+	height: 50px;
+}
+
+.site-actions{
+	height: 20px;
+	margin-top: 5px;
+}
+
+.cart-actions{
+	height: 20px;
+	margin-top: 5px;
+}
+
+.slide-show{	
+	height: 250px;
+	margin-top: 10px;
+	margin left: 10px;
+	margin-right: 10px;
+}
+
+.top-bar{
+	width: 1380px;
+	height: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #787878;
+}
+
+.top-bar-cell{
+	width: 440px;
+	height: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.body-wrap{
+	width: 100%;
+}
+
+.leftside-bar{
+	width: 250px;
+	display: inline-block;
+}
+
+.products-wrap{
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.products-line{
+	height: 200px;
+}
+
+.product-cell{
+	width: 200px;
+	height: 180px;
+	margin: 10px;
+	display: inline-block;
+}
