@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script src="{{asset('js/jquery-2.1.3.min.js')}}" language="JavaScript"></script>
+
 	<link href="{{asset('lib/bootstrap-3.3.2-dist/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-	<script src="{{asset('lib/bootstrap-3.3.2-dist/js/bootstrap.min.js')}}" language="JavaScript"></script>
+	<script src="{{asset('lib/bootstrap-3.3.2-dist/js/bootstrap.min.js')}}"></script>
+
+	<link href="{{asset('lib/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('lib/jquery-ui-1.11.4.custom/jquery-ui.min.css')}}" rel="stylesheet" type="text/css" />
+	<script src="{{asset('lib/jquery-ui-1.11.4.custom/jquery-ui.min.js')}}" language="JavaScript"></script>
+	
 	<link href="{{asset('css/grace.css?78934')}}" rel="stylesheet" type="text/css" />
 	<title>Lady Grace Интернет-магазин</title>
 </head>
@@ -18,7 +25,7 @@
 				<div class="col-lg-2">
 					<div class="actions">
 						<div class="site-actions">
-							<button type="button" id="reg_btn" class="btn btn-default btn-sm">
+							<button type="button" id="reg_btn" class="btn btn-warning btn-sm">
 								Зарегистрироваться
 							</button>
 							<button type="button" id="entry_btn" class="btn btn-default btn-sm">
@@ -35,62 +42,339 @@
 		</div>
 
 		<div class="slide-show">
-			<img src="{{asset('slide.png')}}" alt="">
+			<img src="https://api.fnkr.net/testimg/688x250/00CED1/FFF/?text=Slide-show">
+			<img src="https://api.fnkr.net/testimg/688x250/00CED1/FFF/?text=Slide-show">
 		</div>
 		
 		<div class="top-bar">
 			<div class="top-bar-cell">
 				<button type="button" class="btn btn-default btn-sm">
-					Женское
+					Для женщин
 				</button>
 			</div>
 			<div class="top-bar-cell">
 				<button type="button" class="btn btn-default btn-sm">
-					Мужское
+					Для мужчин
 				</button>
 			</div>
 			<div class="top-bar-cell">
 				<button type="button" class="btn btn-default btn-sm">
-					Детское
+					Для детей
 				</button>
 			</div>
 		</div>
 
 		<div class="body-wrap">
 			<div class="leftside-bar">
-				
+				<div class="categories-bar">
+					<a href="#">
+						Сумки
+					</a><br />
+					<a href="#">
+						Платья
+					</a><br />
+					<a href="#">
+						Кофты
+					</a><br />
+					<a href="#">
+						Брюки
+					</a><br />
+					<a href="#">
+						Обувь
+					</a><br />
+				</div>
+				<div class="search-bar">
+					<div id="price_slider"></div>
+				</div>
 			</div>
 			<div class="products-wrap">
 				<div class="products-line">
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
+					<div class="product-line-name">
+						Обувь
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1200
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-cell-inside">
+							Быстрый просмотр
+						</div>
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="100px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/1.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
 				</div>
 				<div class="products-line">
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
+					<div class="product-line-name">
+						Сумки
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/1.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
 				</div>
 				<div class="products-line">
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
+					<div class="product-line-name">
+						Платья
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/1.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/1.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
 				</div>
 				<div class="products-line">
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
-					<div class="product-cell"></div>
+					<div class="product-line-name">
+						Юбки
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/1.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/3.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
+					<div class="product-cell">
+						<div class="product-image">
+							<img src="{{asset('images/products/2.jpg')}}" height="120px" alt="">
+						</div>
+						<div class="product-name">
+							Сумка женская
+						</div>
+						<div class="product-price">
+							$1000
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="footer"></div>
+	</div>
+	<div class="pp-quick">
+		<div class="pp-title">
+			Платье красивое вместе с сумкой на меху
+		</div>
+		<div class="pp-close">
+			<span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
+		</div>
+		<div class="pp-main-image">
+			<img src="https://api.fnkr.net/testimg/290x520/00CED1/FFF/?text=product">
+			<div class="pp-social">
+				<img src="{{asset('images/ok.png')}}" class="social-btn" alt="">
+				<img src="{{asset('images/vk.jpg')}}" class="social-btn" alt="">
+			</div>
+		</div>
+		<div class="pp-properties">
+			<div class="pp-price">83 809 руб.</div>
+			<div class="pp-property">Длина: 95-97 см.</div>
+			<div class="pp-property">Материал: хлопок, полиэстер</div>
+			<div class="pp-property">
+				Размеры:
+			</div>
+			<div class="pp-size">
+				<div class="size-value">S</div>
+				<div class="size-value">M</div>
+				<div class="size-value">L</div>
+				<div class="size-value">XL</div>
+			</div>
+			<div class="pp-actions">
+				<div class="pp-action">
+					<button type="button" id="add_btn" class="btn btn-warning btn-sm">
+						Добавить в корзину
+					</button>
+				</div>
+				<div class="pp-action">
+					<button type="button" id="add_btn" class="btn btn-info btn-sm">
+						Добавить в лист ожидания
+					</button>
+				</div>
+			</div>
+		</div>		
 	</div>
 </body>
 </html>
