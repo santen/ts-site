@@ -12,9 +12,11 @@
 	<script src="{{asset('lib/jquery-ui-1.11.4.custom/jquery-ui.min.js')}}" language="JavaScript"></script>
 	
 	<link href="{{asset('css/grace.css?78934')}}" rel="stylesheet" type="text/css" />
+	<script src="{{asset('js/grace.js')}}" language="JavaScript"></script>
 	<title>Lady Grace Интернет-магазин</title>
 </head>
 <body>
+	<div class="hidden-layout"></div>
 	<div class="main-wrap">
 		<div class="header">
 			<div class="row">
@@ -84,7 +86,60 @@
 					</a><br />
 				</div>
 				<div class="search-bar">
-					<div id="price_slider"></div>
+					<div class="search-block">
+						<div class="search-label">Цена:</div>
+						<div id="price_slider"></div>
+						<div class="search-slider-values">
+							<div class="search-val-min">
+								<div id="price_min">500</div>
+							</div>
+							<div class="search-val-max">
+								<div id="price_max">80000</div>
+							</div>
+						</div>
+					</div>
+					<div class="search-block">
+						<div class="search-label">Материал:</div>
+						<div class="search-materials">
+							<input type="checkbox">Натуральная кожа<br />
+							<input type="checkbox">Синтетика<br />
+							<input type="checkbox">Железо<br />
+							<input type="checkbox">Пластик<br />
+						</div>
+					</div>
+					<div class="search-block">
+						<div class="search-label">Размеры:</div>
+						<ul class="nav nav-tabs">
+							<li role="presentation" id="eur_tab" class="active"><a href="#">Европа</a></li>
+							<li role="presentation" id="rus_tab"><a href="#">Россия</a></li>
+						</ul>
+						<div class="search-materials" id="e_materials">
+							<input type="checkbox">S<br />
+							<input type="checkbox">M<br />
+							<input type="checkbox">L<br />
+							<input type="checkbox">XL<br />
+							<input type="checkbox">XXL<br />
+						</div>
+						<div class="search-materials" id="r_materials" style="display: none;">
+							<input type="checkbox">44-46<br />
+							<input type="checkbox">46-48<br />
+							<input type="checkbox">48-50<br />
+							<input type="checkbox">52-54<br />
+							<input type="checkbox">54-56<br />
+						</div>
+					</div>
+					<div class="search-block">
+						<div class="search-label">Длина:</div>
+						<div id="height_slider"></div>
+						<div class="search-slider-values">
+							<div class="search-val-min">
+								<div id="height_min">50</div>
+							</div>
+							<div class="search-val-max">
+								<div id="height_max">120</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="products-wrap">
